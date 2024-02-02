@@ -1,14 +1,15 @@
-﻿using BookStore.Core.Models;
+﻿using BookStore.Core.Abstractions;
+using BookStore.Core.Models;
 using BookStore.DataAccess.Entites;
 using Microsoft.EntityFrameworkCore;
 
-namespace BookStore.DataAccess;
+namespace BookStore.DataAccess.Repository;
 
-public class BookRepository
+public class BooksRepository : IBooksRepository
 {
     private readonly BookStoreDbContext _context;
 
-    public BookRepository(BookStoreDbContext context)
+    public BooksRepository(BookStoreDbContext context)
     {
         _context = context;
     }
@@ -61,7 +62,14 @@ public class BookRepository
 
         return id;
     }
-
+    /* 
+    Ctrl + alt + / + p - Create Project
+    Ctrl + alt + / + c - Create Class
+    Ctrl + alt + / + i - Create Interface
+    Ctrl + alt + / + r - Create Record
+    Ctrl + alt + / + s - Create Struct
+    Ctrl + alt + / + a - Add Project to Solution
+     */
 
 
     public async Task<Guid> Delete(Guid id)
@@ -71,4 +79,5 @@ public class BookRepository
         .ExecuteDeleteAsync();
         return id;
     }
+
 }
