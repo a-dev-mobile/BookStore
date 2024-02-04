@@ -1,4 +1,7 @@
+using BookStore.Application.Services;
+using BookStore.Core.Abstractions;
 using BookStore.DataAccess;
+using BookStore.DataAccess.Repository;
 using Microsoft.EntityFrameworkCore;
 
 ;
@@ -20,6 +23,11 @@ builder.Services.AddDbContext<BookStoreDbContext>(
     option =>
 option.UseNpgsql(builder.Configuration.GetConnectionString(nameof(BookStoreDbContext))));
 
+builder.Services.AddScoped<IBookServices, BookServices>();
+builder.Services.AddScoped<IBooksRepository, BooksRepository>();
+
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -29,6 +37,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
