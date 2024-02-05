@@ -1,4 +1,4 @@
-﻿using BookStore.DataAccess.Entites;
+using BookStore.DataAccess.Entites;
 using Microsoft.EntityFrameworkCore;
 
 namespace BookStore.DataAccess
@@ -13,7 +13,7 @@ namespace BookStore.DataAccess
 
 
 
-        public DbSet<BookEntity> Books { get; set; }
+        public DbSet<Book2Entity> Books { get; set; }
 
     }
 }

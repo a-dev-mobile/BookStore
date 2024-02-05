@@ -1,6 +1,6 @@
-﻿namespace BookStore.DataAccess.Entites
+namespace BookStore.DataAccess.Entites
 {
-    public class BookEntity
+    public class Book2Entity
     {
 
         public Guid Id { get; set; }

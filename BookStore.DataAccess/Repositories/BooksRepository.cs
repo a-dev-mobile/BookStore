@@ -1,4 +1,4 @@
-﻿using BookStore.Core.Abstractions;
+using BookStore.Core.Abstractions;
 using BookStore.Core.Models;
 using BookStore.DataAccess.Entites;
 using Microsoft.EntityFrameworkCore;
@@ -30,7 +30,7 @@ public class BooksRepository : IBooksRepository
 
     public async Task<Guid> Create(Book book)
     {
-        var bookEntity = new BookEntity
+        var bookEntity = new Book2Entity
         {
             Id = book.Id,
             Title = book.Title,
@@ -62,7 +62,7 @@ public class BooksRepository : IBooksRepository
 
         return id;
     }
-    /* 
+    /*
     Ctrl + alt + / + p - Create Project
     Ctrl + alt + / + c - Create Class
     Ctrl + alt + / + i - Create Interface

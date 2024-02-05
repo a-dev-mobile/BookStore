@@ -1,13 +1,13 @@
-﻿using BookStore.DataAccess.Entites;
+using BookStore.DataAccess.Entites;
 using BookStore.Core.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace BookStore.DataAccess;
 
-public class BookConfiguration : IEntityTypeConfiguration<BookEntity>
+public class BookConfiguration : IEntityTypeConfiguration<Book2Entity>
 {
-    public void Configure(EntityTypeBuilder<BookEntity> builder)
+    public void Configure(EntityTypeBuilder<Book2Entity> builder)
     {
         builder.HasKey(x => x.Id);
         builder.Property(b => b.Title)
