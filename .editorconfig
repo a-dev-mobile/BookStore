@@ -1,0 +1,30 @@
+# Этот файл является корневым файлом EditorConfig и применяется ко всем файлам в этом проекте.
+root = true
+
+# Определяет базовые настройки, которые применяются ко всем файлам
+[*]
+charset = utf-8              # Кодировка файла
+end_of_line = lf             # Символ конца строки (lf, crlf, cr)
+insert_final_newline = true  # Убеждаемся, что файл заканчивается пустой строкой
+trim_trailing_whitespace = true # Удаление лишних пробелов в конце строк
+
+# Определяет настройки для файлов C# (*.cs и .csx)
+[*.cs,*.csx]
+indent_style = space         # Использование пробелов для отступов
+indent_size = 4              # Четыре пробела для каждого уровня отступа
+insert_final_newline = true  # Убеждаемся, что файл заканчивается пустой строкой
+trim_trailing_whitespace = true # Удаление лишних пробелов в конце строк
+
+# Определяет настройки для файлов проекта и решения (например, .csproj, .sln)
+[*.{csproj,sln,proj,projitems,props}]
+indent_style = space
+indent_size = 2
+
+# Определяет настройки для файлов конфигурации JSON (например, appsettings.json)
+[*.json]
+indent_style = space
+indent_size = 2
+
+# Определяет настройки для файлов Markdown
+[*.md]
+trim_trailing_whitespace = false

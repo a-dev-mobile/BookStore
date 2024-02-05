@@ -8,16 +8,16 @@ namespace BookStore.Core.Abstractions;
 
 public interface IBookServices
 {
-     Task<List<Book>> GetAllBooks();
+    Task<List<Book>> GetAllBooks();
 
 
-     Task<Guid> CreateBook(Book book);
+    Task<Guid> CreateBook(Book book);
 
 
-     Task<Guid> UpdateBook(Guid id, string title, string description, decimal price);
+    Task<Guid> UpdateBook(Guid id, string title, string description, decimal price);
 
 
-     Task<Guid> DeleteBook(Guid id);
+    Task<Guid> DeleteBook(Guid id);
 
 }
 

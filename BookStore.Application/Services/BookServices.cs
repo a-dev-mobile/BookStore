@@ -14,8 +14,8 @@ namespace BookStore.Application.Services
         public async Task<List<Book>> GetAllBooks()
         {
             return await _booksRepository.Get();
-        } 
- 
+        }
+
 
 
 
